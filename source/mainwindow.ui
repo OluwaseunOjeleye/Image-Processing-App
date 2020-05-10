@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Processing</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>0</y>
+      <width>291</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>321</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>696</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>Fi&amp;le</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionClear"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuFunction">
+    <property name="title">
+     <string>Se&amp;gmentation</string>
+    </property>
+    <addaction name="actionHistogram"/>
+    <addaction name="actionColor_histogram"/>
+    <addaction name="actionOtsu_Threshold"/>
+    <addaction name="actionK_Means_Binary"/>
+    <addaction name="actionK_Means"/>
+   </widget>
+   <widget class="QMenu" name="menuMorphology">
+    <property name="title">
+     <string>&amp;Morph &amp; Rep</string>
+    </property>
+    <widget class="QMenu" name="menuRepresentation_2">
+     <property name="title">
+      <string>&amp;Representation</string>
+     </property>
+     <addaction name="actionConnected_Component_Analysis"/>
+     <addaction name="actionDraw_Bound_Box"/>
+     <addaction name="actionDraw_Object_Edge"/>
+     <addaction name="separator"/>
+     <addaction name="actionFeature_Extraction"/>
+    </widget>
+    <widget class="QMenu" name="menuMorphology_2">
+     <property name="title">
+      <string>&amp;Morphology</string>
+     </property>
+     <addaction name="actionDilation"/>
+     <addaction name="actionErosion"/>
+     <addaction name="actionOpen_2"/>
+     <addaction name="actionClosing"/>
+     <addaction name="actionBoundary_Extraction"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuMorphology_2"/>
+    <addaction name="menuRepresentation_2"/>
+   </widget>
+   <widget class="QMenu" name="menuNoise_Elimination">
+    <property name="title">
+     <string>&amp;Noise Elimination</string>
+    </property>
+    <addaction name="actionFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuTrain_Test">
+    <property name="title">
+     <string>T&amp;rain  Test</string>
+    </property>
+    <addaction name="actionTrain"/>
+    <addaction name="actionTest"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Detector">
+    <property name="title">
+     <string>Detector</string>
+    </property>
+    <widget class="QMenu" name="menuSmoothening">
+     <property name="title">
+      <string>&amp;Smoothening</string>
+     </property>
+     <addaction name="actionGaussian_Filter"/>
+    </widget>
+    <widget class="QMenu" name="menuEdge_Detection">
+     <property name="title">
+      <string>&amp;Edge Detection</string>
+     </property>
+     <widget class="QMenu" name="menuSobel_Filter">
+      <property name="title">
+       <string>&amp;Sobel Filter</string>
+      </property>
+      <addaction name="actionGx"/>
+      <addaction name="actionGy"/>
+      <addaction name="actionG"/>
+      <addaction name="actionOrientation"/>
+     </widget>
+     <addaction name="menuSobel_Filter"/>
+     <addaction name="separator"/>
+     <addaction name="actionSobel_Edge_Detector"/>
+     <addaction name="actionCanny_Edge_Detector"/>
+    </widget>
+    <widget class="QMenu" name="menuLine_Detector">
+     <property name="title">
+      <string>&amp;Line Detector</string>
+     </property>
+     <addaction name="actionHough_Transform"/>
+    </widget>
+    <widget class="QMenu" name="menuCircle_Detector">
+     <property name="title">
+      <string>&amp;Circle Detector</string>
+     </property>
+     <addaction name="actionHough_Transform_Circle"/>
+    </widget>
+    <addaction name="menuSmoothening"/>
+    <addaction name="menuEdge_Detection"/>
+    <addaction name="menuLine_Detector"/>
+    <addaction name="menuCircle_Detector"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuNoise_Elimination"/>
+   <addaction name="menuFunction"/>
+   <addaction name="menuMorphology"/>
+   <addaction name="menuTrain_Test"/>
+   <addaction name="menuEdge_Detector"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>&amp;Clear</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>&amp;Intensity histogram</string>
+   </property>
+  </action>
+  <action name="actionColor_histogram">
+   <property name="text">
+    <string>&amp;Color histogram</string>
+   </property>
+  </action>
+  <action name="actionK_Means">
+   <property name="text">
+    <string>&amp;K-Means Cluster Threshold</string>
+   </property>
+  </action>
+  <action name="actionOtsu_Threshold">
+   <property name="text">
+    <string>&amp;Otsu Threshold</string>
+   </property>
+  </action>
+  <action name="actionK_Means_Binary">
+   <property name="text">
+    <string>K-&amp;Means Cluster Binary Threshold</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="text">
+    <string>&amp;Mean Filter</string>
+   </property>
+  </action>
+  <action name="actionConnected_Component_Analysis">
+   <property name="text">
+    <string>&amp;Connected Component Analysis</string>
+   </property>
+  </action>
+  <action name="actionDilation">
+   <property name="text">
+    <string>&amp;Dilation</string>
+   </property>
+  </action>
+  <action name="actionErosion">
+   <property name="text">
+    <string>&amp;Erosion</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="text">
+    <string>&amp;Opening</string>
+   </property>
+  </action>
+  <action name="actionClosing">
+   <property name="text">
+    <string>&amp;Closing</string>
+   </property>
+  </action>
+  <action name="actionBoundary_Extraction">
+   <property name="text">
+    <string>&amp;Boundary Extraction</string>
+   </property>
+  </action>
+  <action name="actionDraw_Bound_Box">
+   <property name="text">
+    <string>&amp;Draw Bound Box</string>
+   </property>
+   <property name="toolTip">
+    <string>Threshold+Boundary Detection+CCA</string>
+   </property>
+  </action>
+  <action name="actionDraw_Object_Edge">
+   <property name="text">
+    <string>Draw &amp;Object Edge</string>
+   </property>
+  </action>
+  <action name="actionFeature_Extraction">
+   <property name="text">
+    <string>&amp;Feature Extraction</string>
+   </property>
+  </action>
+  <action name="actionTrain">
+   <property name="text">
+    <string>&amp;Train</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>&amp;Predict Object</string>
+   </property>
+  </action>
+  <action name="actionCanny_Edge_Detector">
+   <property name="text">
+    <string>&amp;Canny Edge Detector</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Filter">
+   <property name="text">
+    <string>&amp;Gaussian Filter</string>
+   </property>
+  </action>
+  <action name="actionG">
+   <property name="text">
+    <string>G&amp;radient G</string>
+   </property>
+  </action>
+  <action name="actionGx">
+   <property name="text">
+    <string>&amp;Gx</string>
+   </property>
+  </action>
+  <action name="actionGy">
+   <property name="text">
+    <string>G&amp;y</string>
+   </property>
+  </action>
+  <action name="actionOrientation">
+   <property name="text">
+    <string>&amp;Orientation</string>
+   </property>
+  </action>
+  <action name="actionHough_Transform">
+   <property name="text">
+    <string>&amp;Hough Transform(Line)</string>
+   </property>
+  </action>
+  <action name="actionHough_Transform_Circle">
+   <property name="text">
+    <string>&amp;Hough Transform(Circle)</string>
+   </property>
+  </action>
+  <action name="actionSobel_Edge_Detector">
+   <property name="text">
+    <string>Sobel Edge Detector</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
