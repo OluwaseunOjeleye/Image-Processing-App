@@ -271,7 +271,7 @@
   </action>
   <action name="actionTrain">
    <property name="text">
-    <string>&amp;Train</string>
+    <string>&amp;Train Data</string>
    </property>
   </action>
   <action name="actionTest">
@@ -321,7 +321,7 @@
   </action>
   <action name="actionSobel_Edge_Detector">
    <property name="text">
-    <string>Sobel Edge Detector</string>
+    <string>Sobel &amp;Edge Detector</string>
    </property>
   </action>
  </widget>

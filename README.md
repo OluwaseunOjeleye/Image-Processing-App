@@ -1,8 +1,20 @@
-
-
 # Image Processing
 
-This project consists of image processing algorithms and they are all implemented in C++.
+This project consist of two Image Processing projects implemented in C++. These projects are:  
+
+```
+1. Object Detection and Classification based on Geometric Invariant Moment.  
+2. Line and Circle detection based on Hough Transform.
+```
+
+## Project 1: Object Detection and Classification based on Geometric Invariant Moment
+
+This project consist of the implementation of objects detection and classification program which detects and classifies objects (such as rice, beans, etc.) based on their geometric shape. The diagram below shows a typical image processing system and the sub-processes involved in this project:
+![Alt text](../master/Test_images/documentation_Images/Fig1.png?raw=true "Title")
+
+## Line and Circle detection based on Hough Transform
+
+ddd
 
 ## Getting Started
 

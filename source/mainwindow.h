@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "image.h"
+#include <bmp.h>
 #include <QMainWindow>
 #include <QString>
 #include <QFileDialog>
@@ -112,6 +112,7 @@ private slots:
 
 private:
     void display_Image(std::string filename, std::string title);
+    void Invert_Binary_Image_Background();
     void Threshold(int T, bool display);
     void Otsu_Threshold(bool display);
     void Calculate_Intensity_Hist();
@@ -129,6 +130,8 @@ private:
     //Morphology Functions
     void Dilate();
     void Erosion();
+    void Opening();
+    void Closing();
 
     //RST-Invariant Feature Extraction
     void Feature_Extraction(bool save_RSI_Feature_vector);
@@ -164,7 +167,10 @@ private:
 
     //Hough Transform
     std::pair<int, int> Hough_Transform_Line_Detector();
+    std::tuple<int, int, int> Hough_Transform_Circle_Detector();
     void Draw_Line(int d, int theta);
+    void Draw_Circle(int a, int b, int r);
+
     //Data
     Ui::MainWindow *ui;
     QMessageBox MsgBox;
@@ -180,6 +186,7 @@ private:
     bitmap_image direction;
     bitmap_image image_edge_dect;
     bitmap_image Line_detect;
+    bitmap_image Circle_detect;
 
     int width;
     int height;
@@ -189,7 +196,10 @@ private:
     int histogram[256];
     int red_histogram[256], blue_histogram[256], green_histogram[256];
 
+    // Noise elimination filter
     std::vector<std::vector<double>> Mean_Kernel;
+
+    //Structuring element for dilation and erosion
     std::vector<std::vector<unsigned char>> Structuring_Element;
 
     //For Connected Component Analysis
