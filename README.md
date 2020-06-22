@@ -2,12 +2,10 @@
 
 This project consist of the implementation of image processing projects **without** the use of any image processing library (such as opencv). It was implemented with ​[Qt development software](https://wiki.qt.io/Main) on a Linux platform and the used language is C++. The projects implemented so far are:  
 
-```
-1. Object Detection and Classification based on Geometric Invariant Moment.  
-2. Line and Circle detection based on Hough Transform.
-```
+1. **Object Detection and Classification based on Geometric Invariant Moment.**  
+2. **Line and Circle detection based on Hough Transform.**
 <p align="center">
-  <img src="Test_images/documentation_Images/Fig3.png" width="350" title="App" alt="App">
+  <img src="Test_images/documentation_Images/Fig3.png" title="App" alt="App">
 </p>
 
 ## Project 1: Object Detection and Classification based on Geometric Invariant Moment
@@ -33,7 +31,7 @@ This project consist of the implementation of objects detection and classificati
 
 The diagram below shows a typical image processing system and the sub-processes involved in this project:
 <p align="center">
-  <img src="Test_images/documentation_Images/Fig1.png" width="350" title="Object Detection and Classification" alt="Object Detection and Classification">
+  <img src="Test_images/documentation_Images/Fig1.png" title="Object Detection and Classification" alt="Object Detection and Classification">
 </p>
 
 
@@ -53,7 +51,7 @@ This project consist of the implementation of lines and circles detection progra
 
 The diagram below shows the sub-processes involved in this project:
 <p align="center">
-  <img src="Test_images/documentation_Images/Fig2.png" width="350" title="Line and Circle Detection" alt="Line and Circle Detection">
+  <img src="Test_images/documentation_Images/Fig2.png" title="Line and Circle Detection" alt="Line and Circle Detection">
 </p>
 
 ## Getting Started
@@ -70,7 +68,7 @@ Cloning The GitHub Repository
 git clone https://github.com/OluwaseunOjeleye/Objects-Detection-and-Classification---Line-and-Circle-Detection-App.git
 ```
 ### How to use the program
-Once you've cloned the repository, instructions on how to use the application can be found in [Report.pdf](https://github.com/OluwaseunOjeleye)
+Once you've cloned the repository, instructions on how to use the application can be found in [Report.pdf](https://github.com/OluwaseunOjeleye/Objects-Detection-and-Classification---Line-and-Circle-Detection-App/blob/master/Report.pdf)
 
 ## Author
 * **Jamiu Oluwaseun Ojeleye** 
